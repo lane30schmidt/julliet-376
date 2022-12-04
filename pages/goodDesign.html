@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Schmidt's Julliet Final</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="..\css\style.css">
+  </head>
+  <body>
+    <div id="entireHeader">
+      <div id="intro-panel">
+        <div id="intro-block">
+          <h1>Welcome to Schmidt's Julliet Final</h1>
+          </br>
+          <h2>Let's take a look at some bad UI and improve it!</h2>
+        </div>
+      </div> 
+      <nav class="navbar navbar-expand-lg navbar-inverse">
+        <div id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="../index.html">Home</a>
+            <a class="nav-item nav-link" href="../pages/badDesign.html">Bad Design</a>
+            <a class="nav-item nav-link" href="#">Improved Design</a>
+            <a class="nav-item nav-link" href="https://github.com/lane30schmidt/julliet-376" target="_blank">See the Code!</a>
+            <a class="nav-item nav-link" href="#" target="_blank">Check this page's validation!</a>
+            <a class="nav-item nav-link" href="https://gist.github.com/barrycumbie/de4aa0fcb0cad79a870305240d726cd0">Class Link!</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="allContent">
+      <div class="info">
+        <p>The issue with the PS5 game bar is that it provides the user with no form of organization or convenience. If the user wants to move a game on the homescreen to make it more easily accessible, then they should be able to. Here is my proposed solution for allowing the user to move the games around.<br/><br/>
+      </div>
+
+      <style>
+        #div1, #div2 {
+          float: left;
+          width: 100px;
+          height: 35px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid black;
+        }
+        </style>
+        <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+        </head>
+        <body>
+        
+        <h2>Drag and Drop</h2>
+        <p>Drag the PS5 logo back and forth between the different sections.</p>
+        
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="https://oyster.ignimgs.com/wordpress/stg.ign.com/2020/01/PS5.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="https://oyster.ignimgs.com/wordpress/stg.ign.com/2020/01/PS5.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+
+        
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        
+
+
+
+      <br>
+      <br>
+      <br>
+
+      <p><br>As the prototype shows above, instead of locking the user into the assigned order Sony has made, it would allow the user to move the games around the screen in any order they would like. This will allow for more customization and convenience for the user and better their experience while using the UI.</p>
+    </div>
+    <footer>
+      <div id="footer-block">
+        <p>Created by Lane Schmidt</p>
+        <p>December of 2022</p>
+      </div>
+    </footer>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="../js/script.js"></script>
+  </body>
+</html>
